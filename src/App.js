@@ -1,5 +1,6 @@
 import React from "react";
 import { addToCart } from "./reduxSaga/action";
+import { removeToCart } from "./reduxSaga/removeCart/removeAction";
 import { useDispatch } from "react-redux";
 function App() {
   const dispatch = useDispatch();
@@ -13,6 +14,13 @@ function App() {
         }}
       >
         action called
+      </button>
+      <button
+        onClick={() => {
+          dispatch(removeToCart());
+        }}
+      >
+        remove to cart
       </button>
     </>
   );
