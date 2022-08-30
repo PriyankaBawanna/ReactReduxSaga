@@ -1,6 +1,5 @@
 import React from "react";
-import { addToCart } from "./reduxSaga/action";
-import { removeToCart } from "./reduxSaga/removeCart/removeAction";
+
 import Header from "./component/header";
 import { useDispatch } from "react-redux";
 import Main from "./component/Main";
