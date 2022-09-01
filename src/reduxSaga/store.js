@@ -1,6 +1,15 @@
-import { createStore } from "redux";
-//redux store and dummy reducer we inject store in the Provider(index.js )
 import rootreducer from "./rootreducer";
-const store = createStore(rootreducer);
+import { configureStore } from "@reduxjs/toolkit";
+import ProductSaga from "./ProductSaga";
+
+import createSagaMiddleware from "redux-saga";
+
+const sagaMiddleware = createSagaMiddleware();
+const store = configureStore({
+  reducer: rootreducer,
+  middleware: () => [sagaMiddleware],
+});
+
+sagaMiddleware.run(ProductSaga);
 
 export default store;

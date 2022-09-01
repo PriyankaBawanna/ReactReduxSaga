@@ -1,6 +1,7 @@
 import React from "react";
 import { addToCart, removeToCart, emptyCart } from "../reduxSaga/action";
 import { useDispatch } from "react-redux";
+import { ProductList } from "../reduxSaga/productListaction";
 function Main() {
   const dispatch = useDispatch();
 
@@ -28,6 +29,14 @@ function Main() {
         }}
       >
         action emptyCart
+      </button>
+
+      <button
+        onClick={() => {
+          dispatch(ProductList());
+        }}
+      >
+        Product List
       </button>
     </>
   );
