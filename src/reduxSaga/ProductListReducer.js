@@ -1,10 +1,10 @@
-import { PRODUCT_LIST } from "./constant";
+import { PRODUCT_LIST, SET_PRODUCT_LIS } from "./constant";
 export const ProductListReducer = (data = [], action) => {
   switch (action.type) {
-    case PRODUCT_LIST:
-      console.log("Product List Execute  Reducer", action);
+    case SET_PRODUCT_LIS:
+      console.log(" SET Product List Execute  Reducer", action);
 
-      return [action.data];
+      return [...action.data];
 
     default:
       return data;
