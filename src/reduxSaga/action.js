@@ -1,17 +1,17 @@
 import { ADD_TO_CART } from "./constant";
 import { REMOVE_TO_CART, EMPTY_CART } from "./constant";
-export const addToCart = () => {
+export const addToCart = (data) => {
   console.log("Action is called ");
   return {
     type: "ADD_TO_CART",
-    data: "1 item",
+    data,
   };
 };
-export const removeToCart = () => {
+export const removeToCart = (data) => {
   console.log("Action is called remove to cart  ");
   return {
     type: "REMOVE_TO_CART",
-    data: "1 item",
+    data,
   };
 };
 
